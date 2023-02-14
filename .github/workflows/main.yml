@@ -1,4 +1,4 @@
-name: 'Primeiro workflow Hello World'
+name: Primeiro workflow Hello World
 
 on:
   push:
