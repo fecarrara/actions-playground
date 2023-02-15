@@ -1,1 +1,17 @@
+name: Workflow de criação de artefato - Carrara
 
+on:
+  push:
+jobs:
+  create-artifact:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      
+      with:
+        name: ${{ env.NOME }}
+        path: .
